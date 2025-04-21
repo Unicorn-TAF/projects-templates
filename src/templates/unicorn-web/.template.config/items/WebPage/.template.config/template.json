@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Vitalii Dobriian",
+    "classifications": ["Testing", "Unicorn.TAF"],
+    "identity": "UnicornWebPageTemplate.CSharp",
+    "name": "Unicorn web page",
+    "shortName": "unicorn-web-page",
+    "type": "item",
+    "sourceName": "NewWebPage",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "symbols": {
+      "namespace":{
+        "type": "parameter",
+        "description": "Th namespace to place class in.",
+        "datatype": "text",
+        "replaces": "Company.WebModule",
+        "defaultValue": "Company.WebModule"
+      }
+    }
+  }

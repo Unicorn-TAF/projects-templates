@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vitalii Dobriian",
+  "classifications": ["Testing", "Unicorn.TAF"],
+  "identity": "UnicornTestTemplate.CSharp",
+  "name": "Unicorn Web module project",
+  "shortName": "unicorn-web",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Company.WebModule",
+  "preferNameDirectory": true,
+  "symbols": {
+    "framework": {
+      "type": "parameter",
+      "replaces": "TARGET_FRAMEWORK",
+      "defaultValue": "net8.0"
+    }
+  }
+}

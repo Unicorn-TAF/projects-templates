@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>TARGET_FRAMEWORK</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unicorn.UI.Core" Version="*" />
+    <PackageReference Include="Unicorn.UI.Web" Version="*" />
+  </ItemGroup>
+</Project>

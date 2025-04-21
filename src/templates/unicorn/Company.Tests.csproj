@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>TARGET_FRAMEWORK</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.*" />
+    <PackageReference Include="Unicorn.Taf.Core" Version="*" />
+    <PackageReference Include="Unicorn.TestAdapter" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(ReportPortal)">
+    <PackageReference Include="Unicorn.Reporting.ReportPortal" Version="*" />
+  </ItemGroup>
+  <ItemGroup Condition="$(Allure)">
+    <PackageReference Include="Unicorn.Reporting.Allure" Version="*" />
+  </ItemGroup>
+  <ItemGroup Condition="$(TestIt)">
+    <PackageReference Include="Unicorn.Reporting.TestIT" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(Allure)">
+    <Content Include="allureConfig.json">
+      <Link>allureConfig.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="$(ReportPortal)">
+    <Content Include="ReportPortal.config.json">
+      <Link>ReportPortal.config.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition="$(TestIt)">
+    <Content Include="Tms.config.json">
+      <Link>Tms.config.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

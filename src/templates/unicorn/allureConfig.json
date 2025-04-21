@@ -1,0 +1,9 @@
+{
+    "allure": {
+        "directory": "allure-results",
+        "links": [
+            "https://bug-tracker-url/{issue}",
+            "https://test-management-url/{tms}"
+        ]
+    }
+}

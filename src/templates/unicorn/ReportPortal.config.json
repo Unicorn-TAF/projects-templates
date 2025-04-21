@@ -1,0 +1,18 @@
+{
+    "enabled": true,
+    "server": {
+        "url": "https://report-portal-url/api/v1/",
+        "project": "project-name",
+        "authentication": {
+            "uuid": "uuid-value"
+        }
+    },
+    "launch": {
+        "name": "Unicorn Demo Launch",
+        "description": "This is demo launch of tests based on Unicorn.TAF",
+        "debugMode": false,
+        "tags": [
+            "demo"
+        ]
+    }
+}

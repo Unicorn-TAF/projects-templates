@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vitalii Dobriian",
+  "classifications": ["Testing","Unicorn.TAF"],
+  "identity": "UnicornTestProjectTemplate.CSharp",
+  "name": "Unicorn test project",
+  "shortName": "unicorn",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Company.Tests",
+  "preferNameDirectory": true,
+  "symbols": {
+    "framework": {
+      "type": "parameter",
+      "replaces": "TARGET_FRAMEWORK",
+      "defaultValue": "net8.0"
+    },
+    "reporting": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "none",
+          "description": "No reporting"
+        },
+        {
+          "choice": "reportportal",
+          "description": "Use Report Portal as external reporting system"
+        },
+        {
+          "choice": "allure",
+          "description": "Use Allure reports as external reporting system"
+        },
+        {
+          "choice": "testit",
+          "description": "use TestIT as external reporting system"
+        }
+      ],
+      "defaultValue": "none",
+      "description": "External reporting system to use"
+    },
+    "HasReporting": {
+      "type": "computed",
+      "value": "(reporting == \"reportportal\" || reporting == \"allure\" || reporting == \"testit\")"
+    },
+    "ReportPortal": {
+      "type": "computed",
+      "value": "(reporting == \"reportportal\")"
+    },
+    "Allure": {
+      "type": "computed",
+      "value": "(reporting == \"allure\")"
+    },
+    "TestIt": {
+      "type": "computed",
+      "value": "(reporting == \"testit\")"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!HasReporting)",
+          "exclude": [
+            "ReportPortal.config.json",
+            "allureConfig.json",
+            "Tms.config.json"
+          ]
+        },
+        {
+          "condition": "(ReportPortal)",
+          "exclude": [
+            "allureConfig.json",
+            "Tms.config.json"
+          ]
+        },
+        {
+          "condition": "(Allure)",
+          "exclude": [
+            "ReportPortal.config.json",
+            "Tms.config.json"
+          ]
+        },
+        {
+          "condition": "(TestIt)",
+          "exclude": [
+            "ReportPortal.config.json",
+            "allureConfig.json"
+          ]
+        }
+      ]
+    }
+  ]
+}
