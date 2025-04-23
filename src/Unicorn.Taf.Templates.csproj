@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <PackageVersion>1.0.0-rc3</PackageVersion>
+    <NuspecProperties>version=$(Version)</NuspecProperties>
     <PackageId>Unicorn.Taf.Templates</PackageId>
     <Title>Unicorn TAF Templates</Title>
     <Authors>Vitalii Dobriian</Authors>
