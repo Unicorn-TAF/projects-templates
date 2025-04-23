@@ -10,12 +10,10 @@ namespace Company.WebModule
     [PageInfo("<page-relative-url>", "<page-title>")]
     public class NewWebPage : WebPage
     {
-        public NewWebPage(WebDriver driver) : base(driver)
-        {
-        }
+        public NewWebPage(WebDriver driver) : base(driver) { }
 
-        [Name("other-element-name")]
+        [Name("element-name")]
         [Find(Using.WebXpath, "//some-xpath")]
-        public WebControl OtherElement { get; set; }
+        public WebControl WebElement { get; set; }
     }
 }

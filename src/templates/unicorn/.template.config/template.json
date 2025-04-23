@@ -3,7 +3,7 @@
   "author": "Vitalii Dobriian",
   "classifications": ["Testing","Unicorn.TAF"],
   "identity": "UnicornTestProjectTemplate.CSharp",
-  "name": "Unicorn test project",
+  "name": "Unicorn Tests project",
   "shortName": "unicorn",
   "tags": {
     "language": "C#",

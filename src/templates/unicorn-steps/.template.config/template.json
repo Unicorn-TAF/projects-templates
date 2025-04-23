@@ -2,14 +2,14 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Vitalii Dobriian",
   "classifications": ["Testing", "Unicorn.TAF"],
-  "identity": "UnicornWebTemplate.CSharp",
-  "name": "Unicorn Web module project",
-  "shortName": "unicorn-web",
+  "identity": "UnicornStepsInjectionTemplate.CSharp",
+  "name": "Unicorn Test steps injection project",
+  "shortName": "unicorn-steps",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "Company.WebModule",
+  "sourceName": "Company.StepsInjection",
   "preferNameDirectory": true,
   "symbols": {
     "framework": {

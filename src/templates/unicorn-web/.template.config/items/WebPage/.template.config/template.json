@@ -3,7 +3,7 @@
     "author": "Vitalii Dobriian",
     "classifications": ["Testing", "Unicorn.TAF"],
     "identity": "UnicornWebPageTemplate.CSharp",
-    "name": "Unicorn web page",
+    "name": "Unicorn Web page",
     "shortName": "unicorn-web-page",
     "type": "item",
     "sourceName": "NewWebPage",
@@ -14,7 +14,7 @@
     "symbols": {
       "namespace":{
         "type": "parameter",
-        "description": "Th namespace to place class in.",
+        "description": "The namespace to place class in.",
         "datatype": "text",
         "replaces": "Company.WebModule",
         "defaultValue": "Company.WebModule"

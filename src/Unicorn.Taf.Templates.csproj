@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageVersion>1.0.0-rc3</PackageVersion>
+    <PackageId>Unicorn.Taf.Templates</PackageId>
+    <Title>Unicorn TAF Templates</Title>
+    <Authors>Vitalii Dobriian</Authors>
+    <Description>Templates for Unicorn.TAF based test automation</Description>
+    <PackageTags>dotnet-new;templates;testing;unicorn</PackageTags>
+    <PackageProjectUrl>https://unicorn-taf.github.io</PackageProjectUrl>
+    <Copyright>Copyright (c) Vitalii Dobriian 2025</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Unicorn-TAF/projects-templates</RepositoryUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+
+    <PackageType>Template</PackageType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates/**/*" Exclude="templates/**/bin/**;templates/**/obj/**" />
+    <Compile Remove="**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)\icon.png" Pack="true" Visible="false" PackagePath="\" />
+    <None Include="$(MSBuildThisFileDirectory)\README.md" Pack="true" Visible="false" PackagePath="\" />
+  </ItemGroup>
+</Project>

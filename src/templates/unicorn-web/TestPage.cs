@@ -10,18 +10,16 @@ using Unicorn.UI.Web.PageObject.Attributes;
 namespace Company.WebModule
 {
     [PageInfo("<page-relative-url>", "<page-title>")]
-    public class ExamplePage : WebPage
+    public class TestPage : WebPage
     {
         [Name("element-name")]
         [ById("element-id")]
         private readonly TextInput _someInput;
 
-        public ExamplePage(WebDriver driver) : base(driver)
-        {
-        }
+        public TestPage(WebDriver driver) : base(driver) { }
 
         [Name("other-element-name")]
         [Find(Using.WebXpath, "//some-xpath")]
-        public WebControl OtherElement { get; set; }
+        public WebControl WebElement { get; set; }
     }
 }

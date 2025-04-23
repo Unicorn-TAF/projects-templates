@@ -6,6 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Unicorn.UI.Core" Version="4.*" />
-    <PackageReference Include="Unicorn.UI.Web" Version="4.*" />
+    <PackageReference Include="Unicorn.UI.Win" Version="4.*" />
   </ItemGroup>
 </Project>

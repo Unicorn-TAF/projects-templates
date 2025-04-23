@@ -6,18 +6,18 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.*" />
-    <PackageReference Include="Unicorn.Taf.Core" Version="*" />
-    <PackageReference Include="Unicorn.TestAdapter" Version="*" />
+    <PackageReference Include="Unicorn.Taf.Core" Version="4.*" />
+    <PackageReference Include="Unicorn.TestAdapter" Version="5.*" />
   </ItemGroup>
 
   <ItemGroup Condition="$(ReportPortal)">
-    <PackageReference Include="Unicorn.Reporting.ReportPortal" Version="*" />
+    <PackageReference Include="Unicorn.Reporting.ReportPortal" Version="4.*" />
   </ItemGroup>
   <ItemGroup Condition="$(Allure)">
-    <PackageReference Include="Unicorn.Reporting.Allure" Version="*" />
+    <PackageReference Include="Unicorn.Reporting.Allure" Version="3.*" />
   </ItemGroup>
   <ItemGroup Condition="$(TestIt)">
-    <PackageReference Include="Unicorn.Reporting.TestIT" Version="*" />
+    <PackageReference Include="Unicorn.Reporting.TestIT" Version="2.*" />
   </ItemGroup>
 
   <ItemGroup Condition="$(Allure)">

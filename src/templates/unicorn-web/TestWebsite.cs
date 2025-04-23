@@ -16,24 +16,16 @@ namespace Company.WebModule
     {
         /// <summary>
         /// Website creation based on existing explicitly created WebDriver instance.
-        /// 
         /// Should call base constructor.
         /// </summary>
         /// <param name="driver"><see cref="WebDriver"/> instance</param>
-        /// <param name="siteUrl">site base url</param>
-        public TestWebsite(WebDriver driver, string siteUrl) : base(driver, siteUrl)
-        {
-        }
+        public TestWebsite(WebDriver driver) : base(driver, "<site-url>") { }
 
         /// <summary>
         /// Website creation based on retrieved type of browser (WebDriver in this case is created automatically).
-        /// 
         /// Should call base constructor.
         /// </summary>
         /// <param name="browser">type of browser</param>
-        /// <param name="siteUrl">site base url</param>
-        public TestWebsite(BrowserType browser, string siteUrl) : base(browser, siteUrl)
-        {
-        }
+        public TestWebsite(BrowserType browser) : base(browser, "<site-url>") { }
     }
 }
