@@ -35,7 +35,7 @@
         },
         {
           "choice": "testit",
-          "description": "use TestIT as external reporting system"
+          "description": "Use TestIT as external reporting system"
         }
       ],
       "defaultValue": "none",

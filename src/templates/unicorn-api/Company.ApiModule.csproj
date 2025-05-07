@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Unicorn.UI.Core" Version="4.*" />
-    <PackageReference Include="Unicorn.UI.Web" Version="4.*" />
-  </ItemGroup>
-  <ItemGroup Condition="$(with-api)">
     <PackageReference Include="Unicorn.Backend" Version="3.*" />
   </ItemGroup>
 </Project>

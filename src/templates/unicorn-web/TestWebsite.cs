@@ -19,13 +19,13 @@ namespace Company.WebModule
         /// Should call base constructor.
         /// </summary>
         /// <param name="driver"><see cref="WebDriver"/> instance</param>
-        public TestWebsite(WebDriver driver) : base(driver, "<site-url>") { }
+        public TestWebsite(WebDriver driver) : base(driver, "<site-url>") { }           // TODO: <--------- Specify website base URL
 
         /// <summary>
         /// Website creation based on retrieved type of browser (WebDriver in this case is created automatically).
         /// Should call base constructor.
         /// </summary>
         /// <param name="browser">type of browser</param>
-        public TestWebsite(BrowserType browser) : base(browser, "<site-url>") { }
+        public TestWebsite(BrowserType browser) : base(browser, "<site-url>") { }       // TODO: <--------- Specify website base URL
     }
 }

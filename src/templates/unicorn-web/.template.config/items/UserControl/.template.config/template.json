@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Vitalii Dobriian",
+    "classifications": ["Testing", "Unicorn.TAF"],
+    "identity": "UnicornUserControlTemplate.CSharp",
+    "name": "Unicorn Web user control",
+    "shortName": "unicorn-web-control",
+    "type": "item",
+    "sourceName": "NewUserControl",
+    "tags": {
+      "language": "C#",
+      "type": "item"
+    },
+    "symbols": {
+      "namespace":{
+        "type": "parameter",
+        "description": "The namespace to place class in.",
+        "datatype": "text",
+        "replaces": "Company.WebModule",
+        "defaultValue": "Company.WebModule"
+      },
+      "kind": {
+        "type": "parameter",
+        "datatype": "choice",
+        "choices": [
+          {
+            "choice": "none",
+            "description": "Create custom empty control"
+          },
+          {
+            "choice": "dropdown",
+            "description": "Create dropdown base control"
+          },
+          {
+            "choice": "window",
+            "description": "Create window base control"
+          },
+          {
+            "choice": "listview",
+            "description": "Create list view base control"
+          },
+          {
+            "choice": "checkbox",
+            "description": "Create checkbox base control"
+          },
+          {
+            "choice": "datagrid",
+            "description": "Create data grid base control"
+          }
+        ],
+        "defaultValue": "none",
+        "description": "Type of user control (if not specified, empty control is created)"
+      },
+      "Custom": {
+        "type": "computed",
+        "value": "(kind == \"none\")"
+      },
+      "Dropdown": {
+        "type": "computed",
+        "value": "(kind == \"dropdown\")"
+      },
+      "Window": {
+        "type": "computed",
+        "value": "(kind == \"window\")"
+      },
+      "ListView": {
+        "type": "computed",
+        "value": "(kind == \"listview\")"
+      },
+      "Checkbox": {
+        "type": "computed",
+        "value": "(kind == \"checkbox\")"
+      },
+      "DataGrid": {
+        "type": "computed",
+        "value": "(kind == \"datagrid\")"
+      }
+    }
+  }

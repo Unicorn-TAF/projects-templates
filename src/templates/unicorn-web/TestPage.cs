@@ -9,17 +9,17 @@ using Unicorn.UI.Web.PageObject.Attributes;
 
 namespace Company.WebModule
 {
-    [PageInfo("<page-relative-url>", "<page-title>")]
+    [PageInfo("<page-relative-url>", "<page-title>")]   // TODO: <--------- Specify page relative URL and page title
     public class TestPage : WebPage
     {
         [Name("element-name")]
-        [ById("element-id")]
+        [ById("LOCATOR")]                               // TODO: <--------- Specify locator
         private readonly TextInput _someInput;
 
         public TestPage(WebDriver driver) : base(driver) { }
 
         [Name("other-element-name")]
-        [Find(Using.WebXpath, "//some-xpath")]
+        [Find(Using.WebXpath, "LOCATOR")]               // TODO: <--------- Specify locator
         public WebControl WebElement { get; set; }
     }
 }
