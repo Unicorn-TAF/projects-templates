@@ -35,6 +35,7 @@ Available template options:
                         - reportportal  Use Report Portal as external reporting system
                         - allure        Use Allure reports as external reporting system
                         - testit        use TestIT as external reporting system
+                      Default: none
 ```
 
 Examples:
@@ -92,6 +93,34 @@ Optional
                                 Default: Company.Steps
 ```
 
+# API module project
+
+## Project
+
+`unicorn-api` template is used to create a project for some API component. The template creates a project with predefined REST client class.
+
+Available template options:
+```
+-f, --framework       Target framework
+                      Default: net8.0
+```
+
+## API client
+
+To create new API client class use `unicorn-api-client` item template
+
+Available template options:
+```
+-p:n, --namespace     The namespace to place class in.
+                      Default: Company.ApiModule
+
+-k, --kind            Type of API client (if not specified, REST API client is created)
+                      Available values:
+                        - rest   Create REST API client
+                        - soap   Create SOAP API client
+                      Default: rest
+```
+
 # Web UI module project
 
 ## Project
@@ -102,21 +131,48 @@ Available template options:
 ```
 -f, --framework       Target framework
                       Default: net8.0
+
+-wa, --with-api       Type: bool
+                      Default: false
 ```
 
 Examples:
 ```bash
 # initialize new web automation project with name `WebModule` in directory WebModule
 dotnet new unicorn-web -o WebModule
+
+# initialize new web automation project with additional dependency on Unicorn.Backend
+dotnet new unicorn-web --with-api
 ```
 
 ## Web Page
+
 `unicorn-web-page` template is used to create a new Web Page class with a predefined control initialization example.
 
 Available template options:
 ```
 -p:n, --namespace     The namespace to place class in.
                       Default: Company.WebModule
+```
+
+## Web control
+
+To create custom user control use `unicorn-web-control` template. Different types of user controls could be created
+
+Available template options:
+```
+-p:n, --namespace     The namespace to place class in.
+                      Default: Company.WebModule
+
+-k, --kind            Type of user control (if not specified, empty control is created)
+                      Available values:
+                        - none      Create custom empty control
+                        - dropdown  Create dropdown base control
+                        - window    Create window base control
+                        - listview  Create list view base control
+                        - checkbox  Create checkbox base control
+                        - datagrid  Create data grid base control
+                      Default: none
 ```
 
 # Windows UI module
