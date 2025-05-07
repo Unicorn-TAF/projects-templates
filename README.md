@@ -10,14 +10,17 @@ Available templates are:
 ```
 Template Name                         Short Name           Language  Tags
 ------------------------------------  -------------------  --------  -------------------
-Unicorn Tests project                 unicorn              [C#]      Testing/Unicorn.TAF
-Unicorn Test suite                    unicorn-suite        [C#]      Testing/Unicorn.TAF
-Unicorn Test steps injection project  unicorn-steps        [C#]      Testing/Unicorn.TAF
+Unicorn API client                    unicorn-api-client   [C#]      Testing/Unicorn.TAF
+Unicorn API module project            unicorn-api          [C#]      Testing/Unicorn.TAF
 Unicorn Test steps class              unicorn-steps-class  [C#]      Testing/Unicorn.TAF
+Unicorn Test steps injection project  unicorn-steps        [C#]      Testing/Unicorn.TAF
+Unicorn Test suite                    unicorn-suite        [C#]      Testing/Unicorn.TAF
+Unicorn Tests project                 unicorn              [C#]      Testing/Unicorn.TAF
 Unicorn Web module project            unicorn-web          [C#]      Testing/Unicorn.TAF
 Unicorn Web page                      unicorn-web-page     [C#]      Testing/Unicorn.TAF
-Unicorn Win module project            unicorn-win          [C#]      Testing/Unicorn.TAF
+Unicorn Web user control              unicorn-web-control  [C#]      Testing/Unicorn.TAF
 Unicorn Win (desktop) window          unicorn-win-window   [C#]      Testing/Unicorn.TAF
+Unicorn Win module project            unicorn-win          [C#]      Testing/Unicorn.TAF
 ```
 
 # Tests
